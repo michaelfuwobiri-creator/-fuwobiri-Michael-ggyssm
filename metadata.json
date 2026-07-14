@@ -1,0 +1,6 @@
+{
+  "name": "Gysm",
+  "description": "An elegant, full-stack tax calculator supporting multiple brackets, monthly freelancer accounting, and professional CV template generator with AI-powered resume content suggestions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

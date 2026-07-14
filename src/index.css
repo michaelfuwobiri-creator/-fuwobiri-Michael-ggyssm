@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Lora", Georgia, serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-forest: #0c2e23;
+  --color-forest-dark: #071c15;
+  --color-forest-light: #164637;
+  --color-sand: #fbfbf8;
+  --color-sand-dark: #f5f5ee;
+  --color-lime: #dcf850;
+  --color-lime-dark: #c1db35;
+}
+
+/* Custom styling for sleek custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(12, 46, 35, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(12, 46, 35, 0.4);
+}
+
+/* Print CSS style override for PDF generation */
+@media print {
+  /* Hide web controls */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Reset body and structure for clean paper output */
+  body, html {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    font-size: 11pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Make sure the CV matches print dimensions */
+  .print-cv-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Prevent page breaks inside sections */
+  .print-section {
+    page-break-inside: avoid !important;
+  }
+
+  /* For dark themes in print, invert back to light so we don't waste black ink */
+  .print-invert-colors {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #e5e7eb !important;
+  }
+}
